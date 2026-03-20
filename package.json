@@ -1,0 +1,19 @@
+{
+  "name": "full-stack-project-1",
+  "version": "1.0.0",
+  "description": "My first proper full stack application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "zain",
+    "chai"
+  ],
+  "author": "Zain Ur Rehman",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
