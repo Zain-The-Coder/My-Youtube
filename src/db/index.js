@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 import { dbName } from "../constants.js";
+import chalk from "chalk";
 
 const connectDB = async () => {
     try {
         const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL}/${dbName}`);
-        console.log(`MongoDB Connected || DB Host : ${connectionInstance.connection.host}`)
+        console.log(chalk.green.bold(`MongoDB Connected || DB Host : ${connectionInstance.connection.host}`));
     } catch (e) {
-        console.log(`MongoDB Connection Error ${e}`);
-        process.exit(1);
+        console.log(chalk.red.bold(`MongoDB Connection Error : ${e}`));
     }
 }
-
 export default connectDB ;

@@ -1,8 +1,7 @@
-import mongoose from "mongoose";
-import { dbName } from "./constants.js";
-import connectDB from "./db/index.js";
 import dotenv from 'dotenv' ;
 import { app } from "./app.js";
+import connectDB from './db/index.js';
+import chalk from 'chalk';
 
 dotenv.config({
     path : "./env"
@@ -11,15 +10,11 @@ dotenv.config({
 connectDB()
 .then(() => {
     app.listen(process.env.PORT || 8000 , () => {
-        console.log(`Server Is Running At ${process.env.PORT}`);
+        console.log(chalk.bold.green(`Server Is Running At ${process.env.PORT}`))
     })
+}).catch((err) => {
+    console.log(chalk.red.bold(`MongoDB Connecction Failed : ${err}`));
 })
-.catch((err) => {
-    console.log(`MongoDB Connection Failed || ${err}`);
-})
-
-
-
 
 
 
