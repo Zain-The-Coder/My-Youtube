@@ -1,5 +1,5 @@
-📺 VidStream - Full Stack MERN YouTube Clone
-VidStream ek powerful video-sharing platform hai jo bilkul YouTube ki tarah kaam karta hai. Is project mein user authentication se lekar video uploading aur real-time comments tak ke features shamil hain.
+📺  - Full Stack MERN YouTube Clone
+VideoTube ek powerful video-sharing platform hai jo bilkul YouTube ki tarah kaam karta hai. Is project mein user authentication se lekar video uploading aur real-time comments tak ke features shamil hain.
 
 🏗️ Tech Stack
 Frontend:
